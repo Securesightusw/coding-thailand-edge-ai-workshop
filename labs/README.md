@@ -27,6 +27,7 @@
 |---|---|---|
 | [common/post-deploy-testing.md](common/post-deploy-testing.md) | หลัง build/deploy model | Deploy แล้วต้องเขียน code ไหม? ต้อง test อะไรบน UNO Q? |
 | [common/model-quality-check.md](common/model-quality-check.md) | ก่อน train, หลัง train, ก่อนทำ V2 | Feature Explorer / Confusion Matrix บอกอะไร? ควรแก้ data หรือ train ใหม่? |
+| [common/prototype-code-starters.md](common/prototype-code-starters.md) | หลัง quick test ผ่าน | จะ map prediction → output / log / webapp ยังไง? |
 
 ---
 

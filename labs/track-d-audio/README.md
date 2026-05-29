@@ -169,9 +169,16 @@ edge-impulse-linux
 
 ```bash
 # บน UNO Q
-edge-impulse-linux-runner --download <project>.eim
 edge-impulse-linux-runner
 ```
+
+ถ้าต้องการไฟล์ `.eim` แยกสำหรับ offline run ให้ export/download จาก Edge Impulse ก่อน แล้วค่อยรันตามเอกสารของ runner รุ่นที่ใช้อยู่
+
+### Step 6.5: Prototype Code Starter
+
+หลัง quick test ผ่าน ให้ map class ไป output โดยระวัง false positive เป็นพิเศษ เช่น `ไอ → alert`, `background → idle`, `confidence ต่ำ → unknown`
+
+เปิดตัวอย่าง logic ได้ที่ [../common/prototype-code-starters.md](../common/prototype-code-starters.md#5-track-d--audio-mapping)
 
 ---
 
@@ -208,13 +215,15 @@ edge-impulse-linux-runner
 ### Cough Detector
 
 ```cpp
-if (class == "ไอ") {
+String predictedClass = topLabel;
+
+if (predictedClass == "ไอ") {
   setPixels(255, 0, 0);   // Red
   buzzer.tone(800, 200);
   // Log timestamp เพิ่มภายหลังได้
-} else if (class == "จาม") {
+} else if (predictedClass == "จาม") {
   setPixels(255, 165, 0); // Orange
-} else if (class == "พูด") {
+} else if (predictedClass == "พูด") {
   setPixels(0, 255, 0);   // Green
 } else {
   setPixels(0, 0, 0);     // Off

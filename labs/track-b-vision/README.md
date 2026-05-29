@@ -181,11 +181,19 @@ ls /dev/video*
 
 ```bash
 # บน UNO Q
-edge-impulse-linux-runner --download <project-id>.eim
 edge-impulse-linux-runner
 
-# จะรัน web server → เปิด browser ดูผล real-time
+# runner จะดาวน์โหลด/รัน model จาก project ที่ผูกไว้
+# แล้วเปิด web server สำหรับดูผล real-time
 ```
+
+ถ้าต้องการไฟล์ `.eim` แยกสำหรับ offline run ให้ export/download จาก Edge Impulse ก่อน แล้วค่อยรันตามเอกสารของ runner รุ่นที่ใช้อยู่
+
+### Step 6.5: Prototype Code Starter
+
+Quick test ยังไม่พอสำหรับ demo สุดท้าย หลังเห็น prediction แล้วให้ map class ไป output อย่างน้อย 1 แบบ เช่น Pixels, Buzzer, LED Matrix หรือ WebUI
+
+เปิดตัวอย่าง logic ได้ที่ [../common/prototype-code-starters.md](../common/prototype-code-starters.md#3-track-b--vision-mapping)
 
 ---
 
@@ -223,15 +231,19 @@ edge-impulse-linux-runner
 ### Smart Recycle Bin (Basic)
 
 ```cpp
-if (class == "ขวด") {
+String predictedClass = topLabel;
+
+if (predictedClass == "ขวด") {
   // เปิด servo ฝา 1
   setPixels(0, 0, 255);   // Blue
-} else if (class == "กระป๋อง") {
+} else if (predictedClass == "กระป๋อง") {
   // เปิด servo ฝา 2
   setPixels(192, 192, 192);  // Silver
-} else if (class == "กระดาษ") {
+} else if (predictedClass == "กระดาษ") {
   // เปิด servo ฝา 3
   setPixels(139, 90, 43);   // Brown
+} else {
+  setPixels(120, 120, 120);  // Unknown / retry
 }
 ```
 

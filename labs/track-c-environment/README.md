@@ -88,9 +88,17 @@ int distance = distance.getDistance();
 | Sample frequency | **2 Hz** (อ่านทุก 0.5 วินาที) |
 | Sensors | Temp, Humidity, Light, Distance (เลือกตามโจทย์) |
 
-#### เป้าหมาย: 200 samples/class
+#### เป้าหมายรอบแรก: 20 recordings/class
 
-**ทำไมต้องเยอะกว่า track อื่น:** เพราะ sensor data dense + variation ในชีวิตจริงเยอะ
+| Class | จำนวน recordings | ความยาวต่อไฟล์ | รวมเวลาโดยประมาณ |
+|---|---|---|---|
+| Class 1 | 20 | 10 วินาที | ~3.5 นาที |
+| Class 2 | 20 | 10 วินาที | ~3.5 นาที |
+| Class 3 | 20 | 10 วินาที | ~3.5 นาที |
+
+ตัวเลขนี้เป็นรอบแรกที่ทำทันใน workshop ถ้าต้องการ model ที่นิ่งขึ้น ให้เพิ่มเป็น 40-60 recordings/class โดยเปลี่ยนสภาพแวดล้อมให้หลากหลายขึ้น
+
+**ทำไมต้องเก็บหลาย recordings:** เพราะ sensor data เปลี่ยนตามเวลา แสง ระยะ และอุณหภูมิจริงในห้อง
 
 ถ้าทีมยังอธิบายไม่ได้ว่า class ไหนพึ่งพา sensor ตัวไหนเป็นหลัก ให้หยุดกลับไปทบทวน W1 ก่อนเก็บเยอะ
 
@@ -112,8 +120,10 @@ int distance = distance.getDistance();
 
 1. **Impulse design**:
    - Input: Time series (10000ms window, 1000ms increase)
-   - Processing: **Flatten** (สำหรับ tabular data) หรือ **Spectral Analysis**
+   - Processing: **Flatten** (แนะนำสำหรับ temp/light/distance ที่เปลี่ยนช้า)
    - Learning: **Classification (NN)**
+
+ใช้ **Spectral Analysis** เฉพาะกรณีที่ signal มี pattern เป็นจังหวะหรือคลื่นชัดเจน ไม่ใช่แค่ค่าค่อย ๆ เปลี่ยนตามสภาพแวดล้อม
 
 2. **Flatten** features:
    - Generate features
@@ -152,6 +162,14 @@ int distance = distance.getDistance();
 4. Arduino App Lab:
    - Input: Modulino Thermo + Light + Distance (custom block)
    - Output: Pixels + Buzzer
+
+ถ้า App Lab ไม่มี block รวม sensor ที่ทีมต้องการ ให้ใช้ Arduino Library จาก Edge Impulse แล้วเขียน code อ่าน sensor เอง จากนั้นส่ง feature เข้า classifier
+
+### Step 6.5: Prototype Code Starter
+
+หลังเห็น prediction แล้ว ให้ map class ไป output เช่น `ปิด → เขียว`, `เปิดสั้น → เหลือง`, `เปิดทิ้ง → แดง + buzzer`
+
+เปิดตัวอย่าง logic ได้ที่ [../common/prototype-code-starters.md](../common/prototype-code-starters.md#4-track-c--environment-mapping)
 
 ---
 
@@ -192,14 +210,18 @@ Multi-sensor มักมี "weight" ที่ต่างกัน:
 ### Fridge Door Alert
 
 ```cpp
-if (class == "ปิด") {
+String predictedClass = topLabel;
+
+if (predictedClass == "ปิด") {
   setPixels(0, 255, 0);   // Green — OK
-} else if (class == "เปิดสั้น") {
+} else if (predictedClass == "เปิดสั้น") {
   setPixels(255, 255, 0); // Yellow — Warning
-} else if (class == "เปิดทิ้ง") {
+} else if (predictedClass == "เปิดทิ้ง") {
   setPixels(255, 0, 0);   // Red — Alert
   buzzer.tone(2000, 500);
    // ส่ง notification เพิ่มภายหลังได้
+} else {
+   setPixels(120, 120, 120); // Unknown / retry
 }
 ```
 

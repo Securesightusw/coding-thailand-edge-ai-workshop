@@ -38,6 +38,8 @@ Repo นี้ควรอ่านเหมือนคู่มือระห
 | Debug & Explain | 1.25 | 5 |
 | Participation & Collaboration | 1.25 | 5 |
 
+สำหรับเกณฑ์ Day 2–3 ดูเพิ่มที่ [docs/07-day2-day3-rubric.md](docs/07-day2-day3-rubric.md)
+
 ---
 
 ## 🗂️ โครงสร้าง Repository
@@ -50,9 +52,12 @@ coding-thailand-edge-ai-workshop/
 │   ├── 02-tracks.md                   ← 4 Tracks ให้เลือก
 │   ├── 03-rubric.md                   ← เกณฑ์ให้คะแนน
 │   ├── 04-git-basics.md               ← Git 101 สำหรับนักเรียน
-│   └── 05-troubleshooting.md          ← ปัญหาที่พบบ่อย
+│   ├── 05-troubleshooting.md          ← ปัญหาที่พบบ่อย
+│   ├── 06-github-setup.md             ← การตั้งค่า GitHub ก่อนเริ่ม
+│   └── 07-day2-day3-rubric.md         ← เกณฑ์รอบ prototype + pitch
 ├── slides/                            ← Slide outline
-│   └── day1-outline.md
+│   ├── day1-outline.md
+│   └── day2-outline.md
 ├── worksheets/                        ← ใบงานนักเรียน
 │   ├── W1-class-design.md
 │   ├── W2-data-collection-log.md
@@ -103,10 +108,12 @@ coding-thailand-edge-ai-workshop/
 1. เตรียมของที่จะแจกแต่ละทีมตาม [docs/00-equipment-checklist.md](docs/00-equipment-checklist.md)
 2. ปรับ [docs/01-schedule.md](docs/01-schedule.md) และ [slides/day1-outline.md](slides/day1-outline.md) ให้ตรงกับบริบทของห้อง
 3. ใช้ [docs/03-rubric.md](docs/03-rubric.md) เป็นเกณฑ์ประเมินกลาง
+4. ใช้ [docs/07-day2-day3-rubric.md](docs/07-day2-day3-rubric.md) สำหรับรอบ prototype + pitch
 
 ไฟล์ที่ใช้ตอนเตรียมห้องและเปิดเวิร์กช็อป:
 - [docs/00-equipment-checklist.md](docs/00-equipment-checklist.md)
 - [slides/day1-outline.md](slides/day1-outline.md)
+- [slides/day2-outline.md](slides/day2-outline.md)
 - [labs/anchor-demo/README.md](labs/anchor-demo/README.md)
 
 ---
