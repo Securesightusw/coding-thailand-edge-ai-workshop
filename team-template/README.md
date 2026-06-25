@@ -7,13 +7,13 @@
 > กรอกแค่ที่ขีดเส้นใต้ ขอ **ครบ** ดีกว่าสวย
 
 ## 👥 ข้อมูลทีม
-- **ชื่อทีม:** _______________
+- **ชื่อทีม:** securesight usw
 - **เลขทีม:** XX
-- **ชื่อบอร์ด:** team-XX-q
+- **ชื่อบอร์ด:** edge11
 - **สมาชิก + บทบาท (3H):**
-  - 🛠️ **Hacker** (เทคนิค: ต่อบอร์ด/เก็บ data/train/deploy): _______________
-  - 🎨 **Hipster** (ผู้ใช้: output ที่คนเข้าใจ/รูปแบบใช้งาน): _______________
-  - 📣 **Hustler** (คุณค่า: ปัญหา/ผู้ใช้/เล่าเดโม่): _______________
+  - 🛠️ **Hacker** (เทคนิค: ต่อบอร์ด/เก็บ data/train/deploy): นาย มุมิน สือรี
+  - 🎨 **Hipster** (ผู้ใช้: output ที่คนเข้าใจ/รูปแบบใช้งาน):นาย ฟะห์มี ดอเลาะเจ๊ะแต
+  - 📣 **Hustler** (คุณค่า: ปัญหา/ผู้ใช้/เล่าเดโม่): นาย นิมีฟซัล มิดิง
 
 ## ✅ Checklist
 
@@ -26,7 +26,7 @@
 - [ ] ต่อ input + ลอง Modulino 7 ตัว + challenges → [morning/hardware-check.md](morning/hardware-check.md)
 
 **บ่าย — เทรนจริง**
-- [ ] input ที่เลือกเทรน: _______________
+- [ ] input ที่เลือกเทรน: กล้อง
 - [ ] เทรน V1 + อ่าน F1/confusion matrix → [afternoon/model.md](afternoon/model.md)
 - [ ] deploy ลงบอร์ดรันได้ (รูป/คลิปใน `assets/`)
 - [ ] prediction log ≥10 cases → [afternoon/predictions.csv](afternoon/predictions.csv)
