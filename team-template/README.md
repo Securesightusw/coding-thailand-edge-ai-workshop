@@ -21,26 +21,26 @@
 - [/ ] **Fork repo ทีม** (ทำก่อนเลย จะได้กรอกงานทั้งวัน) → [student/05-submit.md](../student/05-submit.md) ข้อ 1
 
 **เช้า — ทำให้ UNO Q อยู่มือ**
-- [ ] เช็กอุปกรณ์ที่ได้รับครบ → [morning/kit-checklist.md](morning/kit-checklist.md)
-- [ ] ตั้งบอร์ดเป็นของทีม (รหัส/ชื่อ/Wi-Fi) → [student/02-setup-board.md](../student/02-setup-board.md)
-- [ ] ต่อ input + ลอง Modulino 7 ตัว + challenges → [morning/hardware-check.md](morning/hardware-check.md)
+- [ /] เช็กอุปกรณ์ที่ได้รับครบ → [morning/kit-checklist.md](morning/kit-checklist.md)
+- [ /] ตั้งบอร์ดเป็นของทีม (รหัส/ชื่อ/Wi-Fi) → [student/02-setup-board.md](../student/02-setup-board.md)
+- [ /] ต่อ input + ลอง Modulino 7 ตัว + challenges → [morning/hardware-check.md](morning/hardware-check.md)
 
 **บ่าย — เทรนจริง**
-- [ ] input ที่เลือกเทรน: กล้อง
-- [ ] เทรน V1 + อ่าน F1/confusion matrix → [afternoon/model.md](afternoon/model.md)
-- [ ] deploy ลงบอร์ดรันได้ (รูป/คลิปใน `assets/`)
-- [ ] prediction log ≥10 cases → [afternoon/predictions.csv](afternoon/predictions.csv)
+- [ /] input ที่เลือกเทรน: กล้อง
+- [ /] เทรน V1 + อ่าน F1/confusion matrix → [afternoon/model.md](afternoon/model.md)
+- [ /] deploy ลงบอร์ดรันได้ (รูป/คลิปใน `assets/`)
+- [ /] prediction log ≥10 cases → [afternoon/predictions.csv](afternoon/predictions.csv)
 
 **ต่อยอด — ไอเดียนวัตกรรม**
-- [ ] Lean Canvas 4 ช่องแรก → [idea-canvas.md](idea-canvas.md)
+- [ /] Lean Canvas 4 ช่องแรก → [idea-canvas.md](idea-canvas.md)
 
 ## 📝 ตอบสั้น 3 ข้อ (ปิดวัน)
-**1. ทีมสอน AI ให้ทำอะไร? (ปัญหา + ผู้ใช้)** _______________
-**2. model ทำได้ดีแค่ไหน F1 ต่ำสุดที่ class ไหน ผิดเพราะอะไร?** _______________
-**3. ถ้ามีเวลาอีก 1 ชม. จะแก้อะไรก่อน?** _______________
+**1. ทีมสอน AI ให้ทำอะไร? (ปัญหา + ผู้ใช้)** การทะเลาะ ครุผู้ใช้และนร
+**2. model ทำได้ดีแค่ไหน F1 ต่ำสุดที่ class ไหน ผิดเพราะอะไร?** การเทรนไม่ดีเพราะมีพื้นหลังมากไปทำให้เข้าใจผิด
+**3. ถ้ามีเวลาอีก 1 ชม. จะแก้อะไรก่อน?** รูปที่เทรน
 
 ## 🔗 ลิงก์
-- Edge Impulse project: _______________
+- Edge Impulse project: แยกแว่นกับน้ำ
 - รูป/คลิป model รันบนบอร์ด: ดูใน [assets/](assets/)
 
 ## 📦 ในโฟลเดอร์นี้มีอะไร
